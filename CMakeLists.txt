@@ -17,7 +17,7 @@ list(APPEND PLUGIN_SRCS
 			${PLUGIN_DIR}/prebuilts/ioapi_buf.c
 			${PLUGIN_DIR}/prebuilts/ioapi_mem.c
 			${PLUGIN_DIR}/prebuilts/ioapi.c
-			${PLUGIN_DIR}/prebuilts/iowin32.c
+#			${PLUGIN_DIR}/prebuilts/iowin32.c
 			${PLUGIN_DIR}/prebuilts/miniunz.c
 			${PLUGIN_DIR}/prebuilts/aes/aescrypt.c
 			${PLUGIN_DIR}/prebuilts/aes/aeskey.c
@@ -67,6 +67,7 @@ if(WIN32)
 elseif(LINUX)
 	list(APPEND PLUGIN_LINKLIBS
 				#Lib names
+				z
 	)
 elseif(APPLE)
 	list(APPEND PLUGIN_LINKLIBS

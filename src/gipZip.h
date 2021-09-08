@@ -1,7 +1,7 @@
 /*
  * gipZip.h
  *
- *  Created on: 19 Aðu 2021
+ *  Created on: 19 Aï¿½u 2021
  *      Author: yavuzbilginoglu
  */
 
@@ -21,10 +21,9 @@ public:
 
 	bool open(std::string fullPath);
 	bool openzip(std::string zipPath);
-	bool closeZip(gipZip zip);
+	bool close();
 
-	bool addFile(gipZip zip, std::string filePath);
-	bool closeFile(gipZip zipFile);
+	bool addFile(std::string filePath);
 
 //	std::vector<std::string> getFileList();
 
@@ -34,7 +33,6 @@ private:
 	std::string getDirName(const std::string& fullPath);
 	std::string getFileName(const std::string& fullPath);
 	zipFile zip;
-	zipFile zipFile;
 	unzFile unzip;
 };
 #endif /* SRC_GIPEMPTY_H_ */
